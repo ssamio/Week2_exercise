@@ -28,12 +28,13 @@ app.post('/sum', (req, res) => {
 
 app.post("/list", (req, res) => {
     let payload = req.body.text;
-    if (payload.includes(" ")){
-        wordList = wordList.concat(payload.split(" "));
-    }
-    else {
-        wordList = wordList.concat(payload);
-    }
+    // if (payload.includes(" ")){
+    //     wordList = wordList.concat(payload.split(" "));
+    // }
+    // else {
+    //     wordList = wordList.concat(payload);
+    // }
+    wordList = wordList.concat(payload);
     res.json({list: wordList});
 });
 
